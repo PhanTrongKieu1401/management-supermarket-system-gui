@@ -261,8 +261,8 @@ import { ProductInOrder, OrderDetail, fetchOrderDetail, fetchAcceptOrder, fetchR
 import LoadingCancelModal from '../../../modal/modalLoadingCancel/index.vue';
 import ProductsOutOfStockModal from '../../../modal/modalOutOfStockListProduct/index.vue';
 import AddProductInOrderModal from '../modalAddProductInOrder/index.vue';
-import PopConfirmCancelOrder from '/src/components/pop/popConfirmCancelOrder/index.vue';
-import PopConfirmDeleteProductInOrder from '/src/components/staff/pop/PopConfirmDeleteProductInOrder/index.vue';
+import PopConfirmCancelOrder from '../../../pop/popConfirmCancelOrder/index.vue';
+import PopConfirmDeleteProductInOrder from '../../pop/popConfirmDeleteProductInOrder/index.vue';
 
 import { normalizeName } from '../../../../utils/normalizeName.ts';
 import { OrderStatus } from '../../../../utils/constants/enum.ts';

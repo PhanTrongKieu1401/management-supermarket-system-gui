@@ -22,14 +22,8 @@ export default defineComponent({
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps<{
-    title: {
-        type: String,
-        default: "Bạn muốn hủy đơn hàng này? Số tiền đã thanh toán sẽ không được hoàn!",
-    },
-    visible: {
-        type: Boolean,
-        default: false,
-    },
+    title: string,
+    visible: boolean,
 }>();
 
 const emit = defineEmits([

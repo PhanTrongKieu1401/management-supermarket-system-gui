@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build App
-        run: npm run build -- --base=/Listerio/
+        run: npm run build -- --base=/management-supermarket-system-gui/
       - name: Archive artifact
         shell: sh
         run: |
