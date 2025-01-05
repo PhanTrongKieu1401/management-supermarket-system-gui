@@ -26,8 +26,8 @@
                     <div class="input-container">
                         <input class="dropdown-button" :value="displayedStatus" placeholder="Trạng thái thanh toán"
                             readonly @click="toggleDropdown" />
-                        <font-awesome-icon :icon="['fas', 'chevron-down']" v-if="!isDropdownOpen" class="absolute right-2"/>
-                        <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="isDropdownOpen" class="absolute right-2"/>
+                        <font-awesome-icon :icon="['fas', 'chevron-down']" v-if="!isDropdownOpen" class="absolute right-2" @click="toggleDropdown"/>
+                        <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="isDropdownOpen" class="absolute right-2" @click="toggleDropdown"/>
                     </div>
 
                     <div v-if="isDropdownOpen" class="dropdown-menu">

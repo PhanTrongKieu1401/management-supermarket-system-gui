@@ -662,6 +662,12 @@ const selectProvince = async (province: any) => {
     searchQuery.value = '';
     checkRequired('province', receiver.value.province);
     districts.value = await fetchDistricts(province.provinceID);
+
+    receiver.value.district = '';
+    receiver.value.ward = '';
+    isFilled.value['district'] = false;
+    isFilled.value['ward'] = false;
+    replaceOrderStore.updateTransportFee(0);
     // console.log(JSON.stringify(districts.value, null, 2)); 
 };
 const selectDistrict = async (district: any) => {
@@ -672,6 +678,10 @@ const selectDistrict = async (district: any) => {
 
     wards.value = await fetchWards(district.districtID);
     availableServicesResponse.value = await fetchAvailableServices(district.districtID);
+
+    receiver.value.ward = '';
+    isFilled.value['ward'] = false;
+    replaceOrderStore.updateTransportFee(0);
     // console.log(JSON.stringify(wards.value, null, 2)); 
 };
 const selectWard = async (ward: any) => {
