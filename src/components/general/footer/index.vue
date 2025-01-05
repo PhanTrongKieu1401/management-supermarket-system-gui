@@ -23,9 +23,9 @@
       <div class="footer-section">
         <h3>Hỗ trợ khách hàng</h3>
         <ul>
-          <li><a href="/">Trang chủ</a></li>
-          <li><a href="/cart">Giỏ hàng</a></li>
-          <li><a href="/orders">Đơn hàng của tôi</a></li>
+          <li><router-link to="/">Trang chủ</router-link></li>
+          <li><router-link to="/cart">Giỏ hàng</router-link></li>
+          <li><router-link to="/orders">Đơn hàng của tôi</router-link></li>
         </ul>
       </div>
     </div>
