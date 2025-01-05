@@ -11,7 +11,8 @@ export interface MomoResponse {
     shortLink: string;
 } 
 
-const url = 'http://localhost:3000/api/payment-with-momo'
+// const url = 'http://localhost:3000/api/payment-with-momo'
+const url = 'https://payment-g3yvqomzi-phan-trong-kieus-projects.vercel.app/api/payment-with-momo'
 export const paymentWithMomo = async (partnerCode: String, orderId: string, amount: number, ids: string): Promise<MomoResponse> => {
     try {
         const response = await axios.post(url, {
