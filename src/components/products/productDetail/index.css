@@ -1,0 +1,241 @@
+.product-detail-container {
+    /* max-width: 1200px; */
+}
+
+.product-image img {
+    max-width: 100%;
+}
+
+.star {
+    color: rgb(255, 151, 39)
+}
+
+.estimated-price {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.quantity-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.estimated-price-wrapper {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+.estimated-price {
+    font-weight: bold;
+    color: #555;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    width: 12rem;
+    height: 3rem;
+}
+
+.quantity-selector input {
+    font-size: 20px;
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.btn-quantity-selector {
+    font-size: 20px;
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.btn-quantity-selector:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.btn-quantity-decrease {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.btn-quantity-increase {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.btn-add-to-cart {
+    font-weight: 600;
+    border: 2px solid rgb(228, 68, 52);
+    border-radius: 8px;
+    color: rgb(228, 68, 52);
+}
+
+.btn-add-to-cart:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.expanded-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.left-column {
+    flex: 3;
+}
+
+.right-column {
+    flex: 1;
+}
+
+.rating-buttons button {
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+}
+
+.rating-buttons button:hover {
+    border: 1px solid rgb(228, 68, 52);
+    color: rgb(228, 68, 52);
+}
+
+.rating-buttons button:hover .star {
+    color: rgb(228, 68, 52);
+}
+
+.active {
+    color: rgb(228, 68, 52);
+}
+
+.reply-item {}
+
+.comment {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.comment-header {
+    font-size: 1rem;
+}
+
+.comment-actions button {
+    color: rgb(228, 68, 52);
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.btn-attach-image {
+    color: rgb(228, 68, 52);
+    font-weight: 600;
+}
+
+.btn-attach-image:hover {
+    text-decoration: underline;
+}
+
+.image-preview {
+    display: flex;
+    /* position: relative; */
+}
+
+.image-preview img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn-remove-image {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.btn-submit-reply,
+.btn-submit-comment {
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 0.5rem;
+    color: rgb(228, 68, 52);
+    font-weight: 600;
+}
+
+.btn-submit-reply:hover,
+.btn-submit-comment:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.btn-dropdown-comment {
+    text-decoration: underline;
+    margin-left: 64px;
+    margin-bottom: 20px;
+}
+
+.btn-dropdown-comment:hover {
+    color: rgb(228, 68, 52);
+}
+
+.custom-alert {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgb(228, 68, 52);
+    background-color: rgb(255, 255, 255);
+    padding: 16px;
+    border-radius: 8px;
+    color: rgb(228, 68, 52);
+}
+
+.alert-icon {
+    font-size: 24px;
+    color: rgb(228, 68, 52);
+    margin-right: 10px;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-message {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.alert-description {
+    color: rgb(128, 128, 128);
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid rgb(228, 68, 52);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

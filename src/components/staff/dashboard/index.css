@@ -1,0 +1,112 @@
+.sider {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    background-color: rgb(228, 68, 52);
+    color: white;
+}
+
+.staff-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.icon_main-user {
+    margin-right: 5px;
+}
+
+.staff-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-id {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.staff-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dashboard {
+    flex-grow: 1;
+    margin-top: 5px;
+    overflow-y: auto;
+}
+
+.dashboard-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.dashboard-item:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+    transition: 0.2s;
+}
+
+.dashboard-item .function-name {
+    font-size: 14px;
+}
+
+.chevron {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.sub-dashboard {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 5px;
+}
+
+.sub-dashboard::before {
+    content: ''; 
+    position: absolute;
+    left: 10px;
+    top: 0; 
+    height: 100%; 
+    width: 1px; 
+    background-color: white;
+}
+
+.sub-item {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.sub-item:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+}
+
+.icon {
+    width: 24px; 
+    height: 24px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-right: 10px;
+}
+
+.active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+}

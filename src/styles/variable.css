@@ -1,0 +1,15 @@
+:root {
+    --primary-color: rgb(228, 68, 52);
+    --second-color: rgb(197, 79, 67);
+    --third-color: rgb(237, 164, 156);
+    --star-color: rgb(255, 151, 39);
+    --cancel-color: rgb(124, 119, 119);
+    --background-cancel-color: rgb(243 244 246);
+
+    /* form thông tin */
+    --background-input-information: rgb(255 255 255);
+    --border-input-information: rgb(209 213 219);
+    --background-input-information-disabled: rgb(209 213 219);
+    --color-input-information-disable: rgb(107 114 128);
+    --color-label-input-information: #657384;
+}

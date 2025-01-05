@@ -1,0 +1,227 @@
+.layout-main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.filter-box{
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+}
+
+.title-filter-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-filter-box h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-filter {
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+    padding: 5px 10px;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-filter:hover {
+    background-color: rgb(228, 68, 52);
+    color: white;
+    cursor: pointer;
+}
+
+.filter-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.filter-field {
+    flex: 1;
+}
+
+.filter-field label {
+    margin-right: 5px;
+}
+
+.filter-field input, select {
+    width: 100%;
+    height: 30px!important;
+    height: auto;
+    border: 1px solid rgb(228, 68, 52)!important;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    box-shadow: none;
+    --tw-ring-color: transparent;
+    --tw-ring-offset-width: 0;
+    --tw-ring-width: 0;
+}
+
+.filter-field input:focus, select:focus {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;  
+    box-shadow: 0 0 3px rgb(228, 68, 52);
+    --tw-ring-color: transparent;
+    --tw-ring-offset-width: 0;
+    --tw-ring-width: 0;
+}
+
+.title-list-box {
+    display: flex;
+    margin-bottom: 4px;
+    justify-content: space-between;
+    /* align-items: start; */
+}
+
+.title-list-box h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list-box{
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+}
+
+.summary {
+    margin: 10px 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.option {
+    width: 100%;
+    color: black;
+    padding: 12px 16px;
+    display: flex;
+}
+
+.option:hover {
+    background-color: rgb(229, 68, 52);
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    width: 100%;
+    background-color: rgb(228, 68, 52);
+    color: white;
+}
+
+tbody {
+    /* display: block; */
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+} */
+
+th, td {
+    overflow: hidden;        
+    text-overflow: ellipsis;
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+th {
+    background-color: rgb(228, 68, 52); 
+    color: rgb(255, 255, 255); 
+    padding: 10px;
+    text-align: left;
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 8px;
+    text-align: left;
+}
+
+.tbl-content tr:nth-child(even) {
+    background-color: rgba(228, 68, 52, 0.1);
+}
+
+.tbl-content tr:hover {
+    background-color: rgba(228, 68, 52, 0.2);
+}
+
+.btn-view {
+    background-color: rgb(228,68,52);
+    color: rgb(255, 255, 255);
+    padding: 0.25rem;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-view:hover {
+    background-color: rgb(197, 79, 67);
+}
+
+.btn {
+    border: none;
+    padding: 10px 10px;
+    margin-right: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-add {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.btn-lock {
+    background-color: yellow;
+}
+
+.btn-cancel-product {
+    background-color: rgb(128, 128, 128);
+    color: white;
+}

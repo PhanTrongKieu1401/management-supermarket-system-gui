@@ -1,0 +1,171 @@
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    text-align: left;
+    font-size: 24px;
+}
+
+.customer-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.check-customer {
+    display: flex;
+}
+
+input {
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.order-details {
+    display: flex;
+    padding: 10px 0;
+    max-height: 500px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.order-table {
+    width: 70%;
+    height: 100%;
+}
+
+.order-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-table thead {
+    background-color: rgb(228,68,52);
+    color: rgb(255, 255, 255);
+}
+
+.order-table tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.order-table thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.order-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.order-table tbody tr:nth-child(even) {
+    background-color: rgba(228, 68, 52, 0.1);
+}
+
+.order-table tbody tr:hover {
+    background-color: rgba(228, 68, 52, 0.2);
+    cursor: pointer;
+}
+
+.order-table th, .order-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.product-input {
+    width: 29%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.actions {
+    text-align: right;
+}
+
+.btn-check {
+    background-color: rgb(228,68,52);
+    color: rgb(255, 255, 255);
+    padding: 0.25rem;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-check:hover, .btn-save:hover {
+    background-color: rgb(197, 79, 67);
+}
+
+.btn-save {
+    background-color: rgb(228,68,52);
+    color: rgb(255, 255, 255);
+    padding: 0.25rem;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
+    padding: 0.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: rgb(204, 204, 204);
+    cursor: not-allowed;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner[type="number"] {
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(228, 68, 52); 
+}
+
+input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input[type="radio"]:checked {
+    border-color: rgb(228, 68, 52);
+    background-color: rgb(228, 68, 52);
+    background-image: url('../../../assets/img/check-mark-payment-method.svg');
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}

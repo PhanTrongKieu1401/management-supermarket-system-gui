@@ -1,0 +1,306 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 0rem;
+    list-style: none;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    color: rgb(108, 117, 125);
+    content: "/";
+    line-height: 22px;
+}
+
+.breadcrumb-item {
+    line-height: 22px;
+}
+
+.breadcrumb-item a {
+    color: rgb(124, 119, 119);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: rgb(228, 68, 52);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: rgb(228, 68, 52);
+    text-decoration: none;
+}
+
+.tbl-products-cart {
+    width: 100%;
+    border: 1px solid rgb(228, 68, 52);
+    border-collapse: collapse;
+}
+
+.tbl-products-cart thead {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.tbl-products-cart thead th {
+    background-color: rgb(228, 68, 52); 
+    color: white; 
+    padding: 8px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.tbl-products-cart tbody td {
+    padding: 8px;
+    border: 1px solid rgb(228, 68, 52); 
+    border-collapse: collapse;
+}
+
+.quantity-selector {
+    display: flex;
+    width: 95%;
+    align-items: end;
+    justify-content: end;
+}
+
+.input-quantity {
+    flex-shrink: 0;
+    width: 46%; 
+    height: 100%; 
+    text-align: center; 
+    margin-left: 3px;
+    margin-right: 3px;
+    border: none;
+    border-left: 1px solid rgb(228, 68, 52);
+    border-right: 1px solid rgb(228, 68, 52);
+    appearance: textfield;
+    outline: none;
+}
+
+.input-quantity:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(228, 68, 52); 
+}
+
+.input-information {   
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    padding: 23px 1rem 7px 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border: 1px solid rgb(209 213 219);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.input-information:disabled {   
+    background-color: rgb(209 213 219);
+    color: rgb(107 114 128);
+}
+
+.input-information:focus {
+    outline: none;
+    border-color: rgb(228, 68, 52);
+    box-shadow: 0 0 0 2px rgba(228, 68, 52, 0.5);
+}
+
+.input-information.drop {
+    caret-color: transparent;
+}
+
+.input-information.drop:focus {
+    caret-color: transparent;
+}
+
+.label-information {
+    display: flex;
+    position: absolute;
+    justify-items: center;
+    inset: 0px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: rgb(101, 115, 132);
+    pointer-events: none;
+}
+
+.required {
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(254, 228, 226);
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(209, 213, 219);
+    z-index: 20;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 9px 28px 8px, 
+                rgba(0, 0, 0, 0.08) 0px 6px 16px, 
+                rgba(0, 0, 0, 0.12) 0px 3px 6px -4px;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: rgb(107, 114, 128);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {  
+    background-color: #f5f5f5;
+    transition: 0.5s;
+}
+
+.dropdown ul::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.dropdown ul::-webkit-scrollbar-thumb {
+    background-color: rgb(103, 103, 103);
+    border-radius: 10px;
+}
+
+.dropdown ul::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.dropdown ul::-webkit-scrollbar-track {
+    background-color: rgb(219, 218, 218);
+    border-radius: 4px;
+}
+
+.dropdown-search-container {
+    position: sticky; 
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px;
+    background-color: white;
+    z-index: 1;
+}
+
+.dropdown-search-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 8px 16px 8px;
+    background-color: white;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 8px;
+}
+
+.search-icon {
+    margin-right: 8px;
+}
+
+.dropdown-search {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.dropdown-search:focus {
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.payment-box {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.payment-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.payment-option::after {
+    width: calc(100% + 32px);
+    position: absolute; 
+    left: -16px;
+    bottom: 0;
+    content: "";
+    border-bottom: 1px solid rgb(209 213 219);
+    box-sizing: border-box;
+}
+
+.payment-option:last-child::after {
+    border-bottom: none;
+}
+
+.payment-option input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+    appearance: none;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 50%;
+    position: relative;
+}
+
+.payment-option input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.payment-option input[type="radio"]:checked {
+    border-color: rgb(228, 68, 52);
+    /* color: rgb(228, 68, 52); */
+    color: rgb(255, 255, 255);
+    background-color: rgb(228, 68, 52);
+    background-image: url('../../assets/img/check-mark-payment-method.svg');
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.payment-option label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.img-payment-method {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    border-radius: 4px;
+}

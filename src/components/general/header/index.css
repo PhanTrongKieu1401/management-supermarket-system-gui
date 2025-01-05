@@ -1,0 +1,80 @@
+.btn-search {
+    background-color: rgb(228, 68, 52);
+}
+
+.btn-search:hover {
+    background-color: rgb(197 79 67);
+    transition: background-color 0.3s ease;
+}
+
+.btn-cart {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 68, 52);
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+    font-size: large;
+}
+
+.btn-cart:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.btn-user {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 68, 52);
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+}
+
+.btn-user:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.btn-user:focus {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-user {
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+}
+
+.toggle-user ul li {
+    cursor: pointer;
+}
+
+.toggle-user ul li a {
+    color: rgb(228, 68, 52);
+}
+
+.toggle-user ul li a:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+hr {
+    border-bottom: 1px solid rgb(228, 68, 52);
+}
+
+.btn-to-login {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 68, 52);
+    background-color: rgb(255, 255, 255);
+    color: rgb(228, 68, 52);
+}
+
+.btn-to-login:hover {
+    background-color: rgb(228, 68, 52);
+    color: white;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,44 @@
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.btn-close-modal-out-of-stock {
+    border: 1px solid rgb(228, 68, 52);
+    background-color: rgb(255,255,255);
+    color: rgb(228, 68, 52);
+}
+
+.btn-close-modal-out-of-stock:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255,255,255);
+}

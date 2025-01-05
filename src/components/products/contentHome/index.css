@@ -1,0 +1,220 @@
+.layout-container {
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+/* .voucher-item {
+    flex-shrink: 0;
+    width: 250px;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-item:hover {
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.voucher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voucher-code {
+    color: rgb(228, 68, 52);
+    background: none;
+}
+
+.expire-date {
+    color: rgb(228, 68, 52);
+    border-radius: 8px;
+} */
+
+.btn-details {
+    border: 1px solid rgb(228, 68, 52);
+    color: rgb(228, 68, 52);
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.btn-details:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.btn-view-all-product {
+    border: 1px solid rgb(228, 68, 52);
+    color: rgb(228, 68, 52);
+    cursor: pointer;
+}
+
+.btn-view-all-product:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.product-section {
+    position: relative;
+}
+
+.btn-scroll {
+    background-color: rgb(228, 68, 52);
+    color: white;
+}
+
+.btn-scroll:hover {
+    background-color: rgb(197 79 67);
+}
+
+.sort-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.sort-filter label {
+    margin-right: 10px;
+}
+
+.sort-filter select {
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+.sort-filter select:hover {
+    cursor: pointer;
+}
+
+.sort-filter select:focus {
+    outline: none;
+}
+
+.sort-filter select option {
+    border-bottom: 1px solid rgb(228, 68, 52);
+}
+
+.sort-filter select option:selected {
+    background-color: rgb(228, 68, 52);
+}
+
+.sort-filter select option:hover {
+    background-color: rgb(228, 68, 52);
+}
+
+.product-list {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    height: 400px;
+}
+
+.product-item:hover {
+    border: 1px solid rgb(228, 68, 52);
+    cursor: pointer;
+}
+
+.product-info {}
+
+.product-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.stock-info {
+    text-align: left;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 36px;
+    color: rgb(228, 68, 52);
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-add-to-cart:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.quantity-selector {
+    display: inline-flex;
+    width: 100%;
+    height: 2.5rem;
+    align-items: center;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 36px;
+    color: rgb(228, 68, 52);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.btn-quantity-selector {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.input-quantity {
+    flex-shrink: 0;
+    width: 46%;
+    height: 100%;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: none;
+    border-left: 1px solid rgb(228, 68, 52);
+    border-right: 1px solid rgb(228, 68, 52);
+    appearance: textfield;
+    outline: none;
+}
+
+.input-quantity:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(228, 68, 52);
+}
+
+.icon-container {
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.no-products {
+    grid-column: span 4;
+    height: 300px;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

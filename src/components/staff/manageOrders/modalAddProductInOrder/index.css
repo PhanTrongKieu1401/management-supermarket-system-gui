@@ -1,0 +1,10 @@
+.inp-search:focus {
+    border: 1px solid rgb(228,68,52);
+    outline: none;
+    box-shadow: 0 0 5px rgba(228,68,52,0.5);
+}
+
+.disabled {
+    background-color: rgb(204, 204, 204);
+    cursor: not-allowed;
+}

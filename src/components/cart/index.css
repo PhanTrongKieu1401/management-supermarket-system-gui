@@ -1,0 +1,163 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 0rem;
+    list-style: none;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    color: rgb(108, 117, 125);
+    content: "/";
+    line-height: 22px;
+}
+
+.breadcrumb-item {
+    line-height: 22px;
+}
+
+.breadcrumb-item a {
+    color: rgb(124, 119, 119);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: rgb(228, 68, 52);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: rgb(228, 68, 52);
+    text-decoration: none;
+}
+
+.btn-back-to-home {
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 8px;
+    color: rgb(228, 68, 52);
+}
+
+.btn-back-to-home:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.tbl-products-cart {
+    width: 100%;
+    border: 1px solid rgb(228, 68, 52);
+    border-collapse: collapse;
+}
+
+.tbl-products-cart thead {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.tbl-products-cart thead th {
+    background-color: rgb(228, 68, 52); 
+    color: white; 
+    padding: 8px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.tbl-products-cart tbody td {
+    padding: 8px;
+    border: 1px solid rgb(228, 68, 52); 
+    border-collapse: collapse;
+}
+
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 5;
+}
+
+.checkbox:hover {
+    border-color: rgb(228, 68, 52); 
+    background-color: rgb(228, 68, 52, 0.5); 
+}
+
+.checkbox:focus {
+    outline: none;
+    border-color: rgb(228, 68, 52); 
+    box-shadow: 0 0 0 2px rgba(228, 68, 52, 0.5); 
+}
+
+.checkbox:checked {
+    background-color: rgb(228, 68, 52); 
+    color: rgb(228, 68, 52);
+    border-color: rgb(228, 68, 52); 
+}
+
+.checkbox:checked:hover {
+    background-color: rgb(197, 79, 67); 
+    border-color: rgb(197, 52, 52);
+}
+
+.quantity-selector {
+    display: inline-flex;
+    width: 95%;
+    height: 36px;
+    align-items: center;
+    border: 1px solid rgb(228, 68, 52);
+    border-radius: 36px;
+    color: rgb(228, 68, 52);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.btn-quantity-selector {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.input-quantity {
+    flex-shrink: 0;
+    width: 46%; 
+    height: 100%; 
+    text-align: center; 
+    margin-left: 3px;
+    margin-right: 3px;
+    border: none;
+    border-left: 1px solid rgb(228, 68, 52);
+    border-right: 1px solid rgb(228, 68, 52);
+    appearance: textfield;
+    outline: none;
+}
+
+.input-quantity:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(228, 68, 52); 
+}
+
+.btn-delete-product {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(124, 119, 119);
+    border-radius: 5px;
+    color: rgb(124, 119, 119);
+}
+
+.btn-delete-product:hover {
+    background-color: rgb(124, 119, 119);
+    color: rgb(0, 0, 0);
+}

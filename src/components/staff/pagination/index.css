@@ -1,0 +1,33 @@
+.pagination {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    border: 1px solid rgb(228, 68, 52);
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination button:hover {
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+button.active {
+    font-weight: bold;
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+}
+
+.pagination span {
+    margin: 0 5px;
+    color: rgb(0, 0, 0);
+}
+  

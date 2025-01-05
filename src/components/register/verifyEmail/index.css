@@ -1,0 +1,110 @@
+.title-form {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+.scale-up {
+    transform: scale(1.2);
+    transform-origin: top left right bottom;
+}
+
+.input-information {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 23px 1rem 7px 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border: 1px solid rgb(209 213 219);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.input-information:disabled {
+    background-color: rgb(209 213 219);
+    color: rgb(107 114 128);
+}
+
+.input-information:focus {
+    outline: none;
+    border-color: rgb(228, 68, 52);
+    box-shadow: 0 0 0 2px rgba(228, 68, 52, 0.5);
+}
+
+.input-information.drop {
+    caret-color: transparent;
+}
+
+.input-information.drop:focus {
+    caret-color: transparent;
+}
+
+.label-information {
+    display: flex;
+    position: absolute;
+    justify-items: center;
+    inset: 0px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: rgb(101, 115, 132);
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.btn-send-otp {
+    height: 100%;
+    background-color: rgb(228, 68, 52);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.code-input {
+    border: 2px solid #ccc;
+    border-radius: 0.375rem;
+    text-align: center;
+    height: 3rem;
+    width: 2rem;
+    font-size: 20px;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    outline: none;
+    box-shadow: none;
+}
+
+.code-input:focus {
+    border-color: rgb(228, 68, 52);
+    box-shadow: none;
+    outline: none;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid rgb(228, 68, 52);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.required {
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(254, 228, 226);
+    box-sizing: border-box;
+}

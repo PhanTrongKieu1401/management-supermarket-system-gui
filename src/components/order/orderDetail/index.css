@@ -1,0 +1,131 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 0rem;
+    list-style: none;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    color: rgb(108, 117, 125);
+    content: "/";
+    line-height: 22px;
+}
+
+.breadcrumb-item {
+    line-height: 22px;
+}
+
+.breadcrumb-item a {
+    color: rgb(124, 119, 119);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: rgb(228, 68, 52);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active a {
+    color: rgb(228, 68, 52);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active a:hover {
+    text-decoration: none;
+}
+
+.order-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.order-info-table th, td {
+    width: 25%;
+    padding: 0.75rem;
+    border: none;
+    border-bottom: 1px solid rgb(204, 204, 204); 
+    vertical-align: top;
+}
+
+.order-info-table th, .order-info-table th h2 {
+    font-weight: bold;
+}
+
+.order-info-table strong {
+    font-weight: bold;
+}
+
+.table-fixed {
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+.table-fixed th,
+.table-fixed td {
+    border: 1px solid #ccc;
+    padding: 8px; 
+    vertical-align: middle;
+}
+
+.table-fixed th {
+    background-color: rgb(228, 68, 52);
+    color: white; 
+    padding-bottom: 12px; 
+}
+
+.table-fixed td {
+    text-align: left;
+}
+
+.table-fixed .text-right {
+    text-align: right;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+button {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.cancel-button {
+    background-color: rgb(124, 119, 119);
+}
+
+.accept-button, .deliver-button, .confirm-button {
+    background-color: rgb(228, 68, 52);
+}
+
+button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

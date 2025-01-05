@@ -1,0 +1,50 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.layout-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: rgb(255,255,255);
+    height: 6rem;
+    line-height: 6rem;
+    background-color: rgb(85 5 5);
+}
+
+.layout-main {
+    display: flex;
+    flex: 1;
+    margin-top: 7.25rem; 
+    padding: 0 10rem;
+}
+
+.layout-sider {
+    position: fixed;
+    top: 7.25rem;
+    z-index: 900;
+    text-align: center;
+    color: #fff;
+}
+
+.layout-content {
+    display: flex;
+    margin-left: calc(2.5rem + 16.666667%);
+    min-height: 120px;
+    color: #fff;
+}
+
+.layout-footer {
+    text-align: center;
+    color: #fff;
+    background-color: rgb(85 5 5);
+    height: 128px;
+    width: 100%;
+    /* line-height: 128px; */
+}

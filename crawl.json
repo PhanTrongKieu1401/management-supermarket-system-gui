@@ -1,0 +1,28 @@
+{
+    "api":[
+        {
+            "method": "GET",
+            "url": "https://api-crownx.winmart.vn/it/api/web/v3/item/category",
+            "params": {
+                "orderByDesc": true,
+                "pageNumber": 1,
+                "pageSize": 300,
+                "slug": "sua-cac-loai--c08",
+                "storeCode": 1569,
+                "storeGroupCode": 1998
+            }
+        },
+        {
+            "method": "GET",
+            "url": "https://api-crownx.winmart.vn/it/api/web/v3/item/category",
+            "params": {
+                "orderByDesc": true,
+                "pageNumber": 1,
+                "pageSize": 300,
+                "slug": "sua-cac-loai--c08",
+                "storeCode": 1569,
+                "storeGroupCode": 1998
+            }
+        }
+    ]
+}

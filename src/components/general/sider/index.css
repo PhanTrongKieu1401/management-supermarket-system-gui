@@ -1,0 +1,29 @@
+.product-menu {
+    background-color: rgb(228, 68, 52);
+    color: white;
+    border-radius: 5px;
+}
+
+.menu-title {
+    font-size: medium;
+    font-weight: bold;
+    margin: auto;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.menu-item {
+    font-size: small;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 6px;
+}
+
+.menu-item:hover {
+    background-color: rgb(197, 79, 67);
+}
+
+.selected {
+    background-color: rgb(197, 79, 67);
+    font-weight: bold;
+  }
