@@ -239,7 +239,8 @@ const createImportOrder = async () => {
         const response = await importOrderDetailStore.createImportOrder();
         if(response){
             alert(response);
-            window.location.href = "/staff/imports";
+            router.push('/staff/imports');
+            // window.location.href = "/staff/imports";
         } else {
             alert(response);
             return;

@@ -239,7 +239,7 @@ onMounted(async () => {
         updateCartInLocalStorage();
         localStorage.removeItem('order');
     }
-
+    console.log("Đã thực hiện update cart, next to get order detail");
     const response = await fetchOrderDetail(orderId);
     orderDetail.value = response.data;
     paymentStatus.value = PaymentStatusDisplay[orderDetail.value.paymentStatus] || orderDetail.value.paymentStatus;
@@ -253,7 +253,8 @@ watch(resWSCancelOrder,(newResWSCancelOrder) => {
     } else {
         alert("Hủy đơn hàng thất bại, vui lòng liên hệ với nhân viên cửa hàng!")
     }
-    window.location.href = '/orders';
+    router.push('/orders');
+    // window.location.href = '/orders';
 })
 
 const paymentMethodDisplay = computed(() => {

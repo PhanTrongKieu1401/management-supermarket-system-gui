@@ -504,7 +504,8 @@ window.addEventListener('storage', (event) => {
     if (event.key === 'isLoading') {
         const newIsLoading = JSON.parse(event.newValue as string);
         if (newIsLoading === null) {
-            window.location.href = '/cart';
+            router.push('/cart');
+            // window.location.href = '/cart';
         } else {
             isLoading.value = newIsLoading;
         }
