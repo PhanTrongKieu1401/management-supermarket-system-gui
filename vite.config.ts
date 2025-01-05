@@ -4,7 +4,8 @@ import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  base: '/management-supermarket-system-gui/',
+  // base: '/management-supermarket-system-gui/',
+  base: '/',
   plugins: [
     vue({
       template: {
