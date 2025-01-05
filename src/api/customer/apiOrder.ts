@@ -161,6 +161,7 @@ export interface OrderDetailResponse {
 
 export const fetchOrderDetail = async (orderId: string): Promise<OrderDetailResponse> => {
     try {
+        console.log("ORDERID",orderId)
         const response = await apiClient.get(`/customer/orders/${orderId}`);
         console.log(response);
         return response.data;
