@@ -239,7 +239,7 @@ onMounted(async () => {
         updateCartInLocalStorage();
         localStorage.removeItem('order');
     }
-    console.log("Đã thực hiện update cart, next to get order detail");
+    console.log("Đã thực hiện update cart, next to get order detail ", orderId);
     const response = await fetchOrderDetail(orderId);
     orderDetail.value = response.data;
     paymentStatus.value = PaymentStatusDisplay[orderDetail.value.paymentStatus] || orderDetail.value.paymentStatus;
@@ -269,7 +269,13 @@ const paymentMethodDisplay = computed(() => {
 });
 
 const getOrderIdFromPath = () => {
-    const pathSegments = window.location.pathname.split('/');
+    //dành cho local
+    // const pathSegments = window.location.pathname.split('/');
+    // return pathSegments[pathSegments.length - 1];
+
+    //dành cho deploy
+    const hash = window.location.hash;
+    const pathSegments = hash.split('/');
     return pathSegments[pathSegments.length - 1];
 }
 
