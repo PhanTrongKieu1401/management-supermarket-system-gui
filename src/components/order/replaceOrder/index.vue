@@ -4,9 +4,9 @@
     <div class="container mx-auto my-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/cart">
+                <li class="breadcrumb-item"><router-link to="/cart">
                     <font-awesome-icon :icon="['fas', 'chevron-left']" class="mr-2"/>Quay lại giỏ hàng
-                </a></li>
+                </router-link></li>
             </ol>
         </nav>
         <div class="flex">

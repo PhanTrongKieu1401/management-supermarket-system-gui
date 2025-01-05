@@ -177,7 +177,7 @@
 
       <div class="form-nav-link">
         <div class="left">
-          <a href="/" class="custom-link">Về trang chủ</a>
+          <router-link to="/" class="custom-link">Về trang chủ</router-link>
         </div>
         <div class="right">
           <button @click="handleRegister()"  :disabled="isLoading" type="submit"

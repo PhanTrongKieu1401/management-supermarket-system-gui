@@ -2,9 +2,9 @@
     <div class="container mx-auto py-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Trang chủ</a>
+                <li class="breadcrumb-item"><router-link to="/">Trang chủ</router-link>
                 </li>
-                <li class="breadcrumb-item active"><a href="#">Đơn hàng của tôi</a>
+                <li class="breadcrumb-item active"><router-link to="#">Đơn hàng của tôi</router-link>
                 </li>
             </ol>
         </nav>

@@ -2,11 +2,11 @@
   <div class="product-detail-container mx-auto my-10 w-full">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item"><router-link to="/">Trang chủ</router-link></li>
         <li v-if="filterType && filterType !== 'ALL'" class="breadcrumb-item">
-          <a href="#" @click.prevent="navigateToProducts">{{ getCategoryName(filterType) }}</a>
+          <router-link to="#" @click.prevent="navigateToProducts">{{ getCategoryName(filterType) }}</router-link>
         </li>
-        <li class="breadcrumb-item active"><a href="#"></a>{{ product.name }}</li>
+        <li class="breadcrumb-item active"><router-link to="#"></router-link>{{ product.name }}</li>
       </ol>
     </nav>
 

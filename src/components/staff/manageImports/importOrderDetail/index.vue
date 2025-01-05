@@ -3,10 +3,10 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/staff/imports">Quản lý đơn hàng</a>
+                    <router-link to="/staff/imports">Quản lý đơn hàng</router-link>
                 </li>
                 <li class="breadcrumb-item active">
-                    <a href="#"> {{ importOrderDetail?.importOrderId }}</a>
+                    <router-link to="#"> {{ importOrderDetail?.importOrderId }}</router-link>
                 </li>
             </ol>
         </nav>

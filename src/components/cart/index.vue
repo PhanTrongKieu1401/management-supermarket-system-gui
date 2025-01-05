@@ -2,8 +2,8 @@
     <div class="container mx-auto my-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-                <li class="breadcrumb-item active"><a href="#"></a>Giỏ hàng</li>
+                <li class="breadcrumb-item"><router-link to="/">Trang chủ</router-link></li>
+                <li class="breadcrumb-item active"><router-link to="#"></router-link>Giỏ hàng</li>
             </ol>
         </nav>
 

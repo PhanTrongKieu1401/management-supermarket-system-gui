@@ -5,10 +5,10 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/staff/orders">Quản lý đơn hàng</a>
+                    <router-link to="/staff/orders">Quản lý đơn hàng</router-link>
                 </li>
                 <li class="breadcrumb-item active">
-                    <a href="#"> {{ orderDetail?.orderId }}</a>
+                    <router-link to="#"> {{ orderDetail?.orderId }}</router-link>
                 </li>
             </ol>
         </nav>

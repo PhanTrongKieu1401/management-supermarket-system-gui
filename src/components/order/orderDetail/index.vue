@@ -4,13 +4,13 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/">Trang chủ</a>
+                    <router-link to="/">Trang chủ</router-link>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="/orders">Đơn hàng của tôi</a>
+                    <router-link to="/orders">Đơn hàng của tôi</router-link>
                 </li>
                 <li class="breadcrumb-item active">
-                    <a href="#"> {{ orderDetail?.orderId }}</a>
+                    <router-link to="#"> {{ orderDetail?.orderId }}</router-link>
                 </li>
             </ol>
         </nav>

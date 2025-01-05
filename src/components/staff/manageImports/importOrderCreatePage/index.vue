@@ -5,10 +5,10 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/staff/imports">Quản lý đơn hàng nhập</a>
+                    <router-link to="/staff/imports">Quản lý đơn hàng nhập</router-link>
                 </li>
                 <li class="breadcrumb-item active">
-                    <a href="#">Tạo đơn hàng</a>
+                    <router-link to="#">Tạo đơn hàng</router-link>
                 </li>
             </ol>
         </nav>

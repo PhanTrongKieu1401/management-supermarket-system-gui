@@ -1,9 +1,9 @@
 <template>
   <nav class="mx-auto flex items-center justify-between h-full" style="padding: 0 10rem;" aria-label="Global">
     <div class="flex h-full object-cover w-1/6">
-      <a href="/" class="flex h-full">
+      <router-link to="/" class="flex h-full">
         <img class="h-full object-cover" src="/src/assets/img/Logo.png" alt="" />
-      </a>
+      </router-link>
     </div>
     <div class="flex justify-center items-center w-1/2 h-full">
       <div class="flex justify-center items-center w-full h-full p-5 box-border">
@@ -21,11 +21,11 @@
     </div>
     <div class="flex lg:flex-1 items-center lg:justify-end w-1/3 h-full space-x-4">
       <div v-if="isLoggedIn" class="text-left h-1/2">
-        <a href="/cart" class="btn-cart flex items-center h-full px-4 py-2 rounded text-sm cursor-pointer focus:outline-none">
+        <router-link to="/cart" class="btn-cart flex items-center h-full px-4 py-2 rounded text-sm cursor-pointer focus:outline-none">
           <b-button variant="outline-primary" class="flex items-center h-full">
             <font-awesome-icon :icon="['fas', 'cart-shopping']" /> ({{ cartStore.totalNumberProducts }})
           </b-button>
-        </a>
+        </router-link>
       </div>
       <div v-if="isLoggedIn" class="relative text-left h-1/2">
         <button @click="toggleDropdown" class="btn-user flex items-center h-full px-4 py-2 rounded text-sm cursor-pointer focus:outline-none">
@@ -37,15 +37,15 @@
         <div v-if="isDropdownOpen" class="toggle-user absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-20">
           <ul class="list-none p-0 m-0">
             <li>
-              <a href="/profile" class="block px-4 py-2 text-sm" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">Thông tin cá nhân</a>
+              <router-link to="/profile" class="block px-4 py-2 text-sm" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">Thông tin cá nhân</router-link>
               <hr/>
             </li>
             <li>
-              <a href="/cart" class="block px-4 py-2 text-sm">Giỏ hàng</a>
+              <router-link to="/cart" class="block px-4 py-2 text-sm">Giỏ hàng</router-link>
               <hr/>
             </li>
             <li>
-              <a href="/orders" class="block px-4 py-2 text-sm">Đơn hàng của tôi</a>
+              <router-link to="/orders" class="block px-4 py-2 text-sm">Đơn hàng của tôi</router-link>
               <hr/>
             </li>
             <li @click="logOut">
