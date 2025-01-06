@@ -22,7 +22,10 @@
 }
 
 .btn-filter {
-    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
     background-color: rgb(255, 255, 255);
     color: rgb(228, 68, 52);
     padding: 5px 10px;
