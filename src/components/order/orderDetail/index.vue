@@ -223,20 +223,20 @@ onMounted(async () => {
         const response = await fetchPaymentStatus(orderId);
         console.log("response", response);
         if (response.data === "SUCCESS") {
+            updateCartInLocalStorage();
             localStorage.removeItem('orderId');
             localStorage.removeItem('isLoading');
-            updateCartInLocalStorage();
             localStorage.removeItem('order');
         } else {
             console.error('Error fetching payment status:', response);
             localStorage.removeItem('orderId');
-            localStorage.setItem('isLoading', JSON.stringify(true));
+            localStorage.setItem('isLoading', JSON.stringify(false));
             fetchRemoveOrder(orderId);
             router.push('/order');
         }
     } else {
-        localStorage.removeItem('isLoading');
         updateCartInLocalStorage();
+        localStorage.removeItem('isLoading');
         localStorage.removeItem('order');
     }
     console.log("Đã thực hiện update cart, next to get order detail ", orderId);
