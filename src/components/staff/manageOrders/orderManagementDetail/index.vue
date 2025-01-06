@@ -302,6 +302,7 @@ const outOfStockProducts: ProductOutOfStock[] = [];
 
 onMounted(async () => {
     const orderId = getOrderIdFromPath();
+    console.log("ORDER ID BEFORE LOAD DATA: ", orderId);
     fetchOrderDetails(orderId);
 });
 

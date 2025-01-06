@@ -165,6 +165,7 @@ const ordersDisplay = computed(() =>
 );
 
 const viewOrder = (orderId: string) => {
+    console.log("ORDER ID LIST PAGE: ", orderId)
     router.push({ name: 'OrderManagementDetail', params: {orderId}});
 };
 </script>
