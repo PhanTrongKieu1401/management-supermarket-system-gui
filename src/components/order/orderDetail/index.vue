@@ -276,7 +276,16 @@ const getOrderIdFromPath = () => {
     //dành cho deploy
     const hash = window.location.hash;
     const pathSegments = hash.split('/');
-    return pathSegments[pathSegments.length - 1];
+    const lastSegment = pathSegments[pathSegments.length - 1];
+
+    // Kiểm tra nếu lastSegment chứa query string
+    if (lastSegment.includes('?')) {
+        const queryParams = new URLSearchParams(lastSegment.split('?')[1]);
+        return queryParams.get('orderId');
+    }
+
+    // Nếu không có query string, trả về đoạn cuối cùng của path
+    return lastSegment;
 }
 
 const updateCartInLocalStorage = async () => {
