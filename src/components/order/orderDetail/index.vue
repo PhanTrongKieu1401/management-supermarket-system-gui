@@ -285,7 +285,7 @@ const updateCartInLocalStorage = async () => {
     const productInOrders = order.products.map(product => product.productId);
 
 
-    const updateProductInCartRequest = productInOrders.map(productId => {
+    const updateProductInCartRequest = productInOrders.map(productId => {//nghi vấn đang lỗi đoạn này
         return { productId: productId, quantity: 0};
     });
 

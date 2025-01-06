@@ -251,6 +251,7 @@ const outOfStockProducts = ref<ProductOutOfStock[]>([]);
 const products = computed(() => cartStore.productInCartResponses);
 
 onMounted(async () => {
+    await cartStore.getCart();
     await handleProductQuantityCheck();
 });
 
