@@ -12,7 +12,9 @@
               <button class="btn btn-template" @click="downloadTemplate">Tải file mẫu</button>
             </div>
             <div class="buttons">
-              <button class="btn btn-upload" @click="submitFile">Lưu dữ liệu</button>
+              <button class="btn btn-upload" @click="submitFile">
+                Lưu dữ liệu
+              </button>
               <button class="btn btn-cancel" @click="closeModal">Hủy</button>
             </div>
           </div>

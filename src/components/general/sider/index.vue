@@ -1,14 +1,25 @@
 <template>
     <div class="product-menu w-4/5 pt-3 pb-1">
         <div class="menu-title m-auto pb-3">Danh mục sản phẩm</div>
-        <router-link v-for="category in categories" 
+        <div class="menu-list">
+            <router-link v-for="category in categories" 
+                :key="category.name"
+                :to="{ name: 'Products' }" 
+                class="menu-item flex justify-between items-center p-1" 
+                :class="{ 'selected': isSelectedCategory(category) }"
+                @click="selectCategory(category)">
+                <span>{{ category.name }}</span>
+                <router-link :to="{ name: 'Products' }" class="menu-link">&gt;</router-link>
+            </router-link>
+        </div>
+        <!-- <router-link v-for="category in categories" 
             :key="category.name"
             :to="{ name: 'Products' }" 
             class="menu-item flex justify-between items-center p-1" :class="{ 'selected': isSelectedCategory(category) }"
             @click="selectCategory(category)">
             <span>{{ category.name }}</span>
             <router-link :to="{ name: 'Products' }" class="menu-link">&gt;</router-link>
-        </router-link>
+        </router-link> -->
     </div>
 </template>
 
