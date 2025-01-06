@@ -311,7 +311,13 @@ watch(orderDetail, (newOrderDetail) => {
 });
 
 const getOrderIdFromPath = () => {
-    const pathSegments = window.location.pathname.split('/');
+    //dành cho local
+    // const pathSegments = window.location.pathname.split('/');
+    // return pathSegments[pathSegments.length - 1];
+
+    //dành cho deploy
+    const hash = window.location.hash;
+    const pathSegments = hash.split('/');
     return pathSegments[pathSegments.length - 1];
 }
 

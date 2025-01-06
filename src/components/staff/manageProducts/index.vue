@@ -3,7 +3,10 @@
         <div class="filter-box">
             <div class="title-filter-box">
                 <h1>Lọc sản phẩm:</h1>
-                <button class="btn-filter" @click="applyFilters">Áp dụng</button>
+                <button class="btn-filter" @click="applyFilters">
+                    <span v-if="isLoading" class="loader"></span>
+                    <span v-else>Áp dụng</span>
+                </button>
             </div>
             
             <div class="filter-fields">
@@ -142,6 +145,7 @@ const currentPage = computed(() => filterStore.currentPage);
 const totalPages = ref<number>();
 const totalProducts = ref<number>();
 
+const isLoading = ref<boolean>(false);
 const isModalAddProductManual = ref(false);
 const isModalAddProductByFile = ref(false);
 
@@ -169,6 +173,7 @@ watch(currentPage, (newCurrentPage) => {
 watch(products, (newProducts)=>{});
 
 const applyFilters = async () => {
+    isLoading.value = true;
     filterStore.productId = productId.value?.trim() || null;
     filterStore.name = name.value?.trim() || null;
     filterStore.categoryId = categoryId.value;
@@ -180,11 +185,14 @@ const applyFilters = async () => {
             products.value = response.data.products;
             totalProducts.value = response.data.totalProducts;
             totalPages.value = response.data.totalPages;
+            isLoading.value = false;
         } else {
             console.error('Lấy danh sách sản phẩm thất bại');
         }
     } catch (error:any) {
         alert(error.message);
+    } finally {
+        isLoading.value = false;
     }
 };
 

@@ -3,7 +3,10 @@
         <div class="filter-box">
             <div class="title-filter-box">
                 <h1>Lọc đơn hàng:</h1>
-                <button class="btn-filter" @click="applyFilters">Áp dụng</button>
+                <button class="btn-filter" @click="applyFilters">
+                    <span v-if="isLoading" class="loader"></span>
+                    <span v-else>Áp dụng</span>
+                </button>
             </div>
             
             <div class="filter-fields">
@@ -117,6 +120,7 @@ const currentDate = computed(() => {
     return `${year}-${month}-${day}`;
 });
 
+const isLoading = ref<boolean>(false);
 const startDate = ref<string | null>(filterStore.startDate);
 const endDate = ref<string | null>(filterStore.endDate);
 const customerId = ref<string | null>(filterStore.customerId);
@@ -138,6 +142,7 @@ const openDatePicker = (event: Event) => {
 }
 
 const applyFilters = async () => {
+    isLoading.value = true;
     filterStore.startDate = startDate.value;
     filterStore.endDate = endDate.value;
     filterStore.customerId = customerId.value?.trim() || null;
@@ -148,11 +153,14 @@ const applyFilters = async () => {
         const response = await fetchOrderList();
         if (response) {
             orders.value = response.data;
+            isLoading.value = false;
         } else {
             console.error('Lấy danh sách đơn hàng thất bại');
         }
     } catch (error:any) {
         alert(error.message);
+    } finally {
+        isLoading.value = false;
     }
 };
 

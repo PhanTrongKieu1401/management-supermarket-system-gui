@@ -124,7 +124,10 @@
     </div>
 
     <div class="actions">
-      <button class="btn-save mr-2" @click="processPayment">Thanh toán</button>
+      <button class="btn-save mr-2" @click="processPayment">
+        <span v-if="isLoading" class="loader"></span>
+        <span v-else>Thanh toán</span>
+      </button>
       <button class="btn-delete" @click="cancelOrder">Hủy</button>
     </div>
   </div>
@@ -297,7 +300,7 @@ const processPayment = async () => {
     alert('Vui lòng thêm sản phẩm vào đơn hàng!');
     return;
   }
-
+  isLoading.value = true;
   if(paymentMethod.value === PaymentMethod.COD){
     if (cashAmount.value && cashAmount.value >= totalAmountPayable.value) {
       try {
@@ -310,10 +313,13 @@ const processPayment = async () => {
         }
       } catch (error: any) {
         alert(error.message);
+      } finally {
+        isLoading.value = false;
       }
     } else {
       alert('Số tiền không đủ để thanh toán');
     }
+    isLoading.value = false;
   } else {
     if(paymentMethod.value === PaymentMethod.MOMO){
       try {
@@ -323,6 +329,7 @@ const processPayment = async () => {
       }
     }
   }
+  isLoading.value = false;
 };
 
 const cancelOrder = () => {
