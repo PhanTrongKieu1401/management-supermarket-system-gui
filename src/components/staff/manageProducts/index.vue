@@ -205,6 +205,7 @@ const addFromFile = () => {
 };
 
 const viewProduct = (productId: string) => {
+    console.log(productId)
     router.push({ name: 'ProductManagementDetail', params: {productId}});
 };
 
