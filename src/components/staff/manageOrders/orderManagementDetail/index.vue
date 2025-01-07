@@ -221,8 +221,8 @@
                         @click="cancelOrder(orderDetail?.orderId)" class="cancel-button">Hủy đơn</button>
                     <button v-if="role === AccountType.STAFF && orderDetail?.orderStatus === OrderStatus.APPROVED" 
                         @click="deliverOrder(orderDetail?.orderId)" class="deliver-button">Giao hàng</button>
-                    <!-- <button v-if="role === AccountType.STAFF && orderDetail?.orderStatus === OrderStatus.DELIVERED" 
-                        @click="confirmCompletion(orderDetail?.orderId)" class="confirm-button">Hoàn thành</button> -->
+                    <button v-if="role === AccountType.STAFF && orderDetail?.orderStatus === OrderStatus.DELIVERING" 
+                        @click="confirmCompletion(orderDetail?.orderId)" class="confirm-button">Hoàn thành</button>
                 </div>                
             </div>
         </div>
@@ -256,7 +256,7 @@ import { ref, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { fetchQuantityInStock } from '../../../../api/staff/apiProduct.ts';
-import { ProductInOrder, OrderDetail, fetchOrderDetail, fetchAcceptOrder, fetchRefuseOrder, fetchDeliverOrder, fetchCancelOrder, fetchAddProductToOrder } from '../../../../api/staff/apiOrder.ts';
+import { ProductInOrder, OrderDetail, fetchOrderDetail, fetchAcceptOrder, fetchRefuseOrder, fetchDeliverOrder, fetchCompleteOrder, fetchCancelOrder, fetchAddProductToOrder } from '../../../../api/staff/apiOrder.ts';
 
 import LoadingCancelModal from '../../../modal/modalLoadingCancel/index.vue';
 import ProductsOutOfStockModal from '../../../modal/modalOutOfStockListProduct/index.vue';
@@ -419,22 +419,22 @@ const deliverOrder = async (orderId: string) => {
     }
 };
 
-// const confirmCompletion = async (orderId: string) => {
-//     try {
-//         messageLoading.value = 'Đang từ chối đơn...';
-//         isLoading.value = true;
-//         const response = await fetchRefuseOrder(orderId);
-//         if(response) {
-//             isLoading.value = false;
-//             messageLoading.value = '';
-//             await fetchOrderDetails(orderId);
-//         } else {
-//             alert(response.message);
-//         }
-//     } catch (error:any) {
-//         alert(error.message);
-//     }
-// };
+const confirmCompletion = async (orderId: string) => {
+    try {
+        messageLoading.value = 'Đang cập nhật...';
+        isLoading.value = true;
+        const response = await fetchCompleteOrder(orderId);
+        if(response) {
+            isLoading.value = false;
+            messageLoading.value = '';
+            await fetchOrderDetails(orderId);
+        } else {
+            alert(response.message);
+        }
+    } catch (error:any) {
+        alert(error.message);
+    }
+};
 
 const startEditing = () => {
     isEditing.value = true;

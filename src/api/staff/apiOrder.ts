@@ -169,6 +169,18 @@ export const fetchDeliverOrder = async (orderId: string) => {
     }
 };
 
+export const fetchCompleteOrder = async (orderId: string) => {
+    try {
+        const response = await apiClient.put(`/staff/orders/${orderId}/complete`);
+        return response.data;
+    } catch (error: any) {
+        if (error.response) {
+            throw new Error(error.response.data.message);
+        }
+        throw new Error('Có lỗi xảy ra trong quá trình cập nhật trạng thái đơn hàng!');
+    }
+};
+
 export interface ProductCheckToOrder {
     productId: string;
     name: string;
