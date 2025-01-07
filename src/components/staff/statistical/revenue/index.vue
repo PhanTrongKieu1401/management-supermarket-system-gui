@@ -396,6 +396,14 @@ const setActiveFilter = (filter: FilterType) => {
   fetchStatisticalDataByType(filter);
 };
 
+watch(
+  () => filterStore.$state,
+  (newState) => {
+    filterStore.saveFilterToLocalStorage();
+  },
+  { deep: true }
+);
+
 const fetchStatisticalDataByType = async (filterType: FilterType) => {
   try {
     if (filterType === "time") {
